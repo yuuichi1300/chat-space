@@ -21,6 +21,14 @@ groups_usersテーブル
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
+usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|usersname_id|integer|null: false, foreign_key: true|
+|adress_id|integer|null: false, foreign_key: true|
+
 ### Association
 - belongs_to :group
 - belongs_to :user
