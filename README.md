@@ -13,25 +13,39 @@ Things you may want to cover:
 
 * Database creation
 
+# chat space DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|username|string|null: false|
+### Association
+- has_many :posts
+- has_many :comments
 
-groups_usersテーブル
+
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|usersname_id|integer|null: false, foreign_key: true|
-|adress_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## commentテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :post
+- belongs_to :user
+
 
 * Database initialization
 
