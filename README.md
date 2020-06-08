@@ -8,6 +8,7 @@
 
 ### Association
 - has_many :groups, through :groups_users
+- has_many :groups_users
 - has_many :messages
 
 ## groups_usersテーブル
@@ -20,18 +21,24 @@
 - belongs_to :group
 - belongs_to :user
 
-## groipsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groups name|integer|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
+- has_many :users, through :groups_users
+- has_many :messages
+- has_many :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|image|textnull: false|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
 ### Association
 - belongs_to :user
+- belongs_to :group
