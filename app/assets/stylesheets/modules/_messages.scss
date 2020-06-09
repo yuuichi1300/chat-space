@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+.Header {
+  height: 100px;
+  width: 300px;
+  background-color: #253141;
+  color: #ffffff;
+  text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .parent{
+    height: 100px;
+    width: 300px;
+    background-color: #253141;
+    color: #ffffff;
+    text-align: center;
+      font-size: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px 20px 0px 20px;
+    }
+  
+  .child{
+    width :220px;
+    height: 20px;
+    background-color: #d8d8d8;
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    right: 20;
+    left: 20px;
+  }
+
+
+
+  .Header__logo {
+
+
+
+
+  }
+
+
+// .Contents
+//   .Contents__message
+//     side-bar_group-list
