@@ -1,0 +1,43 @@
+
+
+.main_group_list
+  
+  .main_group_list__main_header
+    .main_group_list__main_header__tmp
+      .main_group_list__main_header__tmp__main_test
+        test
+      .main_group_list__main_header__tmp__main_member
+        member yuuichi
+    .main_group_list__main_header__main_edit
+      edit
+
+  
+  .main_chat
+
+    .main_messages
+      .main_messages_name 
+        YUUICHI 
+      .main_messages_time 
+        2020/6/10/(Wed) 18:00:00
+    .main_messages_coments
+      .main_messages_comennts_rial
+        おはよう！
+
+
+  .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text",placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}    
+
+
+  
+
+  
+
+
+  
+
