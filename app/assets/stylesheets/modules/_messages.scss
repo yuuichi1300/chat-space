@@ -10,49 +10,48 @@
   width: 300px;
   background-color: #253141;
 
-.&__header_top {
-  height: 100px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
+  &__header_top {
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  
+    .side-bar__header {
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      width :260px;
 
-.&__header {
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  width :260px;
-}
+      &__name {
+        font-size: 16px;
+        color: #ffffff;
+      }  
 
-.&__header__name {
-  font-size: 16px;
-  color: #ffffff;
-}
+      &__icons {
+        display: flex;
+      
+        .fas.fa-cog.icon {
+          color: #ffffff;
+          margin-right: 5px;
+        }
 
-.&__header__icons {
-  display: flex;
-}
+        .fas.fa-edit.icon {
+          color: #ffffff;
+        }
+      }
+    }
+  }
 
-.&__cog {
-  color: #ffffff;
-  margin-right: 5px;
-}
-
-.&__edit {
-  color: #ffffff;
-}
-
-
-  .&__group-list{
+  &__group-list{
     height: calc(100vh - 100px);
-    background-color: #253141;
+    background-color: #2f3e51;
     .Contents{
       box-sizing: border-box;
       width: 300px;
       padding: 20px 20px 40px;
       color: #ffffff;
-      .&__message{
+      &__message{
         margin: 0px 20px 5px 20px;
         font-size: 15px;
       }
@@ -113,16 +112,16 @@
     display: frex;
     align-items: center;
     display: flex;
-    .&__name{
+    &__name{
       font-size: 16px;
       color: #333333;
     }
-    .&__time{
+    &__time{
       font-size: 12px;
       color: #999999;
     }
   }
-  .&__coments{
+  &__coments{
     margin-bottom: 46px;
     .main_messages_coments_rial{
       font-size: 14px;
