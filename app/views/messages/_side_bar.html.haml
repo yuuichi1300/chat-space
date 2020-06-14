@@ -2,12 +2,14 @@
   .side-bar__header_top
     .side-bar__header
       .side-bar__header__name
-        YUUICHI
+        = current_user.name
       .side-bar__header__icons
         .side-bar_cog
           = icon('fas', 'cog', class: 'icon')
         .side-bar_edit
-          = icon('fas', 'edit',class: 'icon')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'edit',class: 'icon')
+
   .side-bar__group-list
     .Contents
       .Contents__message
@@ -19,4 +21,3 @@
         techcamp
       .group_message
         まだメッセージありません
-
