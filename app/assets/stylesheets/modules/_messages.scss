@@ -31,13 +31,19 @@
       &__icons {
         display: flex;
       
-        .fas.fa-cog.icon {
+        .side-bar_cog {
           color: #ffffff;
           margin-right: 5px;
+          a{
+            color: #ffffff;
+          }
         }
 
-        .fas.fa-edit.icon {
+        .side-bar_edit {
           color: #ffffff;
+          a{
+            color: #ffffff;
+          }
         }
       }
     }
@@ -54,10 +60,12 @@
       &__message{
         margin: 0px 20px 5px 20px;
         font-size: 15px;
+        color: #ffffff;
       }
       .group_message{
         font-size: 11px;
         margin: 0px 20px 0px 20px;
+        color: #ffffff;
       }
     }
   }
@@ -72,8 +80,8 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
-    
-     &__tmp{
+
+    &__tmp{
        margin-left: 40px;
       &__main_test{
         margin-top: 35px;
@@ -88,17 +96,20 @@
         color: #999999;
       }
     }
-     &__main_edit{
-       height: 40px;
-       width: 72px;
-       margin-top: 28px;
-       margin-right: 40px;
-       padding: 5px 20px;
-       font-size: 16px;
-       color: #38aef0;
-       display: block;
-       border: 1px solid #38AEF0;
-     }
+    &__main_edit{
+      height: 40px;
+      width: 72px;
+      margin-top: 28px;
+      margin-right: 40px;
+      padding: 5px 20px;
+      font-size: 16px;
+      color: #38aef0;
+      display: block;
+      border: 1px solid #38AEF0;
+      a{
+        color: #38aef0;
+      }
+    }
   }
 }
 
@@ -135,42 +146,48 @@
   padding: 20px 40px;
   width: calc(100vw - 300px);
   background-color: #d2d2d2;
-
-  form {
-    .input-box {
-      display: flex;
-      width: 100%;
-      position: relative;
-      &__text {
-        height: 50px;
-        width: 100%;
-        color: #434a54;
-        border-style: none;
-        padding: 0 40px 0 10px;
-      }
-      &__image {
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        color: pointer;
-        font-size: 1.3rem;
-
-        &__file {
-          display: none;
-        }
-      }
-    }
-    .submit-btn{
+  display: flex;
+  justify-content: space-between;
+  .input-box {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    position: relative;
+    &__text {
       height: 50px;
-      width: 100px;
-      margin-left: 15px;
-      padding: 0 30px;
-      display: flex;
-      align-items: center;
-      color: white;
-      background-color: #38aef0;
+      width: 100%;
+      color: #434a54;
+      border-style: none;
+      padding: 0 40px 0 10px;
+    }
+    &__image {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      color: pointer;
+      font-size: 1.3rem;
+
+      &__file {
+        display: none;
+      }
     }
   }
+  .send{
+    height: 50px;
+    width: 100px;
+    margin-left: 15px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #38aef0;
+    .imput-box__submit_s{
+      color: #fafafa;
+      font-size: 15px;
+    }
+  }
+
 }
 .new_message{
   display: flex;
