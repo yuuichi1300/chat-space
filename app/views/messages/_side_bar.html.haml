@@ -1,26 +1,21 @@
 .side-bar
   .side-bar__header_top
     .side-bar__header
-      .side-bar__header__name
+      %h3.side-bar__header__name
         = current_user.name
-      .side-bar__header__icons
-        .side-bar_cog
-          = icon('fas', 'cog', class: 'icon')
-        .side-bar_edit
-          -# = link_to edit_user_path(current_user) do
-          = link_to edit_user_path(current_user), class: "Contents__btn" do
-            = icon('fas', 'edit',class: 'icon')
-
+      %ul.side-bar__header__icons
+        %li.side-bar_cog
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
+        %li.side-bar_edit
+          = link_to new_group_path do
+            = icon('fas', 'edit')
+              
   .side-bar__group-list
     - current_user.groups.each do |group|
       .Contents
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .Contents__message
             = group.name
           .group_message
-            まだメッセージありません
-      .Contents
-        .Contents__message
-          techcamp
-        .group_message
-          まだメッセージありません
+            = group.show_last_message
