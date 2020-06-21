@@ -118,26 +118,30 @@
   height: calc(100vh - 190px);;
   background-color: #fafafa;
   padding: 40px;
+  overflow: scroll;
 
+  &__box{
   .main_messages{
-    display: frex;
     align-items: center;
     display: flex;
     &__name{
       font-size: 16px;
-      color: #333333;
+      margin-right: 10px;
+      color: hsl(0, 0%, 20%);
     }
     &__time{
       font-size: 12px;
       color: #999999;
     }
   }
-  &__coments{
+  .coments{
+    margin-top: 12px;
     margin-bottom: 46px;
     .main_messages_coments_rial{
       font-size: 14px;
       color: #434A54
     }
+  }
   }
 }
 
