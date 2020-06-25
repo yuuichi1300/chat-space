@@ -12,7 +12,7 @@ $(function(){
             </div>
           </div>
           <div class="Message">
-            <p class="main_messages_coments_rial">
+            <p class="coments__rial">
               ${message.content}
             </p>
             <img class="Message__image" src="${message.image}">
@@ -31,7 +31,7 @@ $(function(){
           </div>
         </div>
         <div class="Message">
-          <p class="main_messages_coments_rial">
+          <p class="coments__rial">
             ${message.content}
           </p>
         </div>
@@ -57,11 +57,11 @@ $(function(){
       $('.main_chat').append(html);      
       $('form')[0].reset();
       $('.main_chat').animate({ scrollTop: $('.main_chat')[0].scrollHeight});
-      $('.form__submit').prop("disabled", false);
+      $('.send').prop("disabled", false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-      $('.form__submit').prop("disabled", false);
+      $('.send').prop("disabled", false);
     });
   });
 });
