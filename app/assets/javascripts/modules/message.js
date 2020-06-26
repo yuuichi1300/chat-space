@@ -11,7 +11,7 @@ $(function(){
               ${message.created_at}
             </div>
           </div>
-          <div class="Message">
+          <div class="coments">
             <p class="coments__rial">
               ${message.content}
             </p>
@@ -30,7 +30,7 @@ $(function(){
             ${message.created_at}
           </div>
         </div>
-        <div class="Message">
+        <div class="coments">
           <p class="coments__rial">
             ${message.content}
           </p>
